@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesreset.css">
+    <link rel="stylesheet" href="cv.css">
+    <link rel="stylesheet" href="cv-contact.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div> 
+            <img src="MyFace1.png" alt="Autoportait">
+        </div>
+        <div>
+            <h1>YANN BETTKER</h1>
+            <p>Développeur web/mobile en recherche de stage</p>
+        </div>
+        <div>
+            <h3>LIENS</h3>
+            <a href="portfolio.html">Portfolio</a><br>
+            <a href="https://www.linkedin.com/in/YannBK">Linkedin</a><br>
+            <a href="https://github.com/YannBK">GitHub</a></p>
+            <h3>CONTACT</h3>
+            <a href="../cv.html">Retour CV</a> <br> E-mail : yann.bettker@gmail.com <br>
+        </div>
+    </header>
+    <main>
+        <p id="pcontact">Formulaire de contact bientôt disponible, lorsque j'aurais appris grâce à l'ADRAR comment
+            sécuriser
+            comme il faut les transferts de donnée.</p>
+        <form action="cv_contact.html" method="GET">
+            <label for="name"><span>*</span>Votre nom:
+            </label>
+            <input type="text" name="name" id="name" placeholder="Votre nom" required>
+            <label for="ent">Votre société:
+            </label>
+            <input type="text" name="ent" id="ent" placeholder="Votre entreprise">
+            <label for="email"><span>*</span>Votre email:
+            </label>
+            <input type="email" name="email" id="email" placeholder="Votre email" required>
+            <label for="message">Votre message: </label>
+            <textarea name="message" id="message" cols="50" rows="10" placeholder="Pourquoi me contacter ?"></textarea>
+            <button type="submit">Bientôt disponible</button>
+        </form>
+    </main>
+</body>
+
+</html>

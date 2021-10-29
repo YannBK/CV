@@ -1,0 +1,228 @@
+/*---------------------------------------- GENERAL -------------------------------*/
+body {
+    color: #0288b4;
+    background: url(pexels-luis-quintero-3101527.jpg);
+    min-height: 120vh;
+    box-sizing: border-box;
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p {
+    line-height: 1.5rem;
+    padding: 15px;
+    text-align: justify;
+}
+
+h2 {
+    line-height: 2rem;
+    background-color: rgb(219, 219, 219);
+    width: 30vw;
+    text-align: center;
+    border-radius: 20px;
+    margin: 2rem;
+    color:#023e8a;
+    font-size: 1.3rem;
+    padding: 0.3rem;
+}
+
+h3 {
+    line-height: 1rem;
+    color:#1b539b;
+    padding: 0px 5px 0px 15px;
+}
+
+h4 {
+    margin: 2rem auto 1rem auto;
+    color:#2f75d1;
+    text-decoration: underline;
+    padding: 0px 5px 0px 15px;
+}
+
+h5 {
+    line-height: 1rem;
+    color:#3367aa;
+    padding: 15px 5px 0px 15px;
+}
+
+h6 {
+    line-height: 2rem;
+    color: #308ce2;
+    padding: 0px 5px 0px 15px;
+}
+
+ul {
+    padding: 15px 15px 15px 5vw;
+}
+
+a {
+    text-decoration: none;
+    color: #2b76bb;
+    font-style: italic;
+}
+
+a:hover {
+    color: #73abdf;
+    font-weight: bold;
+}
+
+span {
+    color: red;
+}
+
+/*------------------------------------------ HEADER --------------------------------*/
+header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(248, 248, 248, 0.5);
+    padding: 20px;
+    color:#023e8a;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.3rem;
+}
+
+header img {
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+    transform: scale(0.8);
+}
+
+/*-------------------------------------------- MAIN --------------------------------*/
+main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,auto);
+    margin: 0 5vw;
+}
+
+/*-------------------------------------------- DIVS --------------------------------*/
+
+.box-div {
+    border-bottom: solid 1px #000;
+    border-top: solid 1px #000;
+    border-radius: 5px;
+    width: 40vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.box-div form input,
+.box-div form label {
+    margin: 5px;
+}
+
+.box-choix {
+    display: flex;
+}
+
+.box-none {
+    position: absolute;
+    display: none;
+}
+
+article { 
+    display: none;
+    width: 40vw;
+    background-color: rgb(51,51,51);
+    border-radius: 5px;
+}
+#divLettre {
+    width: 100%;
+    position: relative;
+}
+#lettreM {
+    grid-column: 1 /span 2;
+    grid-row: 3;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+}
+
+#profilP {
+    grid-column: 1;
+    grid-row: 1;
+}
+#parcoursQ {
+    grid-column: 2;
+    grid-row: 2;
+}
+#parcoursA {
+    grid-column: 2;
+    grid-row: 1;
+}
+#expP {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#lettreM:hover > article,
+#profilP:hover > article,
+#parcoursQ:hover > article,
+#parcoursA:hover > article,
+#expP:hover > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* position: fixed; */
+    position: absolute;
+    z-index: 10;
+    animation: montre 0.7s ease;
+}
+@keyframes montre {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*-------------------------------------------- MEDIA --------------------------------*/
+@media only screen and (max-width: 815px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        grid-template: none;
+    }
+
+    .box-div {
+        width: 90vw;
+    }
+
+    article {
+        width: 80vw;
+    }
+    #lettreM {
+        position: relative;
+        left: 0;
+    }
+    h2 {
+        margin: 2rem auto;
+        min-width: 60vw;
+        width: min-content;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+    }
+}
+/*TODO la miniature du Portfolio, faire la même animation que sur l'un des sites que j'ai vu, ou le bloc tourne sur lui-même pour nous montrer son dos, avec une illusion de 3D légère sur le texte...vu sur l'un des sites de la recherche de stage*/
+
+
+

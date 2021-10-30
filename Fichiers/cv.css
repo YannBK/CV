@@ -31,6 +31,7 @@ h3 {
     line-height: 1rem;
     color:#1b539b;
     padding: 0px 5px 0px 15px;
+    font-weight: bold;
 }
 
 h4 {
@@ -103,7 +104,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,auto);
-    margin: 0 5vw;
+    margin: 5vw;
 }
 
 /*-------------------------------------------- DIVS --------------------------------*/
@@ -156,11 +157,11 @@ article {
     grid-column: 1;
     grid-row: 1;
 }
-#parcoursQ {
+#parcoursA {
     grid-column: 2;
     grid-row: 2;
 }
-#parcoursA {
+#parcoursQ {
     grid-column: 2;
     grid-row: 1;
 }
@@ -189,6 +190,53 @@ article {
     100% {
         opacity: 1;
     }
+}
+
+/*------------------------------------------ CONTACT --------------------------------*/
+#pcontact {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    height: 40px;
+    width: 30vw;
+    border-radius: 3px;
+    border: solid 2px #036e92;
+}
+
+label {
+    line-height: 1.5rem;
+    margin: 10px;
+}
+
+textarea {
+    width: 50vw;
+    border-radius: 3px;
+    border: solid 2px #036e92;
+}
+
+button {
+    background-color: #036e92;
+    border: solid 2px #023e8a;
+    color: rgb(253, 239, 155);
+    height: 30px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(253, 239, 155);
+    color: #036e92
 }
 
 /*-------------------------------------------- MEDIA --------------------------------*/

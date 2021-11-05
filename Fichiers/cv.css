@@ -2,7 +2,7 @@
 body {
     color: #0288b4;
     background: url(pexels-luis-quintero-3101527.jpg);
-    min-height: 120vh;
+    min-height: 130vh;
     box-sizing: border-box;
     /* background-size: cover; */
     background-position: center;
@@ -15,6 +15,13 @@ p {
     text-align: justify;
 }
 
+header div p {
+    text-align: center;
+}
+
+header h3 {
+    margin: 5px auto;
+}
 h2 {
     line-height: 2rem;
     background-color: rgb(219, 219, 219);
@@ -139,6 +146,7 @@ article {
     width: 40vw;
     background-color: rgb(51,51,51);
     border-radius: 5px;
+    padding-left: 5px;
 }
 #divLettre {
     width: 100%;
@@ -178,7 +186,6 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* position: fixed; */
     position: absolute;
     z-index: 10;
     animation: montre 0.7s ease;
@@ -212,6 +219,7 @@ input {
     width: 30vw;
     border-radius: 3px;
     border: solid 2px #036e92;
+    padding-left: 5px;
 }
 
 label {
@@ -223,6 +231,7 @@ textarea {
     width: 50vw;
     border-radius: 3px;
     border: solid 2px #036e92;
+    padding: 5px;
 }
 
 button {
@@ -232,11 +241,36 @@ button {
     height: 30px;
     border-radius: 3px;
     font-weight: bold;
+    margin-top: 5px;
 }
 
 button:hover {
     background-color: rgb(253, 239, 155);
-    color: #036e92
+    color: #036e92;
+}
+
+button:active {
+    animation: btn1 0.12s infinite alternate;
+}
+@keyframes btn1 {
+    0% {
+        transform: rotate(2deg);
+        border: solid 4px rgb(255, 0, 0);
+        color: #036e92;
+    }
+    100% {
+        transform: rotate(-2deg);
+        border: solid 2px rgb(253, 239, 155);
+        color: rgb(255, 0, 0);
+    }
+}
+/*------------------------------------------ PORTFOLIO --------------------------------*/
+img[src*="sete1.PNG"] {
+    max-width: 90vw;
+} 
+img[src*="sete1.PNG"]:hover {
+    transition: 1s;
+    transform: scale(1.01) translateX(-3px);
 }
 
 /*-------------------------------------------- MEDIA --------------------------------*/
@@ -246,13 +280,11 @@ button:hover {
         flex-direction: column;
         grid-template: none;
     }
-
     .box-div {
         width: 90vw;
     }
-
     article {
-        width: 80vw;
+        width: 90vw;
     }
     #lettreM {
         position: relative;
@@ -263,14 +295,16 @@ button:hover {
         min-width: 60vw;
         width: min-content;
     }
-
     header {
         flex-direction: column;
         justify-content: center;
         padding: 5px;
     }
+    input {
+        width: 60vw;
+    }
+    textarea {
+        width: 70vw;
+    }
 }
-/*TODO la miniature du Portfolio, faire la même animation que sur l'un des sites que j'ai vu, ou le bloc tourne sur lui-même pour nous montrer son dos, avec une illusion de 3D légère sur le texte...vu sur l'un des sites de la recherche de stage*/
-
-
 

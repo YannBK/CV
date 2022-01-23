@@ -162,7 +162,7 @@
             </h2>
             <article>
                 <form action="index.php#contact" method="post">
-                    <label>Email</label>
+                    <label>Votre email</label>
                     <input type="email" name="email" class="contact" required>
                     <label>Message</label>
                     <textarea name="message" class="contact" rows="15" required></textarea>

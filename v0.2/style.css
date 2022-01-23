@@ -1,0 +1,289 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-image: url('./Fichiers/pexels-luis-quintero-3101527.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 1.4rem;
+}
+/*_-_-_-_-_-_-_-_nav_-_-_-_-_-_-_-_*/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    padding: 0 10px;
+    top:0;
+    background-color: #fff;
+    color: #333;
+    transition: 0.8s;
+    z-index: 1;
+}
+nav div {
+    display: flex;
+    align-items: center;
+}
+nav div img {
+    border-radius: 50%;
+    margin: auto 15px;
+    height: 60px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-evenly;
+}
+nav ul li {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    align-items: center;
+}
+nav ul li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+nav ul li span{
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: linear-gradient(.25turn, #222, #bbb, #222);
+}
+/*changement de classe au scroll*/
+.fondnoir {
+    transition: 0.8s;
+    background-color: #333;
+}
+.textblanc{
+    color: #eee;
+}
+.bordure {
+    background: linear-gradient(.25turn, #eee, #444, #eee);
+}
+nav ul li a:hover ~ span{
+    border-bottom: 1px solid #666;
+    animation: deploie 0.3s linear forwards;
+}
+@keyframes deploie{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/*_-_-_-_-_-_-_-_catégories_-_-_-_-_-_-_-_*/
+.box-div {
+    padding: 60px 20px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h2 {
+    margin: 0;
+    padding: 40px;
+    font-size: 2rem;
+    text-align: center;
+}
+/*présentation*/
+#profil article p {
+    text-align: center;
+    line-height: 50px;
+}
+/*compétences*/
+#competence {
+    background-color: #fff;
+    background-image: url('./Fichiers/pexels-mitchell-luo-3694711.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#competence article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#competence article ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+#competence article ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#competence p {
+    text-align: center;
+}
+.ic-comp {
+    max-height: 120px;
+    margin-bottom: 20px;
+}
+.ic-auto {
+    width: 350px;
+}
+/*parcours autodidacte*/
+#parcoursA {
+    background-color: #fff;
+    background-image: url('./Fichiers/pexels-mitchell-luo-3694711.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#parcoursA h5{
+    text-align: center;
+}
+.sites{
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+    align-items: center;
+    margin: 40px auto;
+}
+#parcoursA article div ul{
+    width: 350px;
+    min-width: 350px;
+}
+#parcoursA article div ul li{
+    padding: 10px;
+}
+#parcoursA article div div ul{
+    width: 350px;
+}
+#parcoursA article div div ul li{
+    padding: 10px;
+}
+/*parcours qualifiant*/
+#parcoursQ{
+    text-align: center;
+}
+/*réalisations*/
+#realisation article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#realisation article div a img,
+#realisation article div a img{
+    transition: 0.2s;
+    transform: scale(0.01);
+    max-width: 95vw;
+}
+/*contact*/
+#contact {
+    background-color: #fff;
+    background-image: url('./Fichiers/pexels-mitchell-luo-3694711.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#contact article form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact {
+    width: 400px;
+    margin: 20px auto 40px auto;
+    min-height: 30px;
+    border-radius: 5px;
+    max-width: 90vw;
+}
+input[type="submit"]{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: rgb(255, 196, 0);
+    border: 1px solid rgb(255, 145, 0);
+    transition: 0.3s;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    transform: scale(1.05);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: rgb(255, 145, 0);
+    border: 5px solid rgb(255, 196, 0);
+}
+#contact article div{
+    text-align: center;
+}
+/*animations au scroll sur sections*/
+@keyframes slideRight{
+    0%{
+        margin-right: 500px;
+    }
+    100%{
+        margin-right: 0;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        margin-left: 500px;
+    }
+    100%{
+        margin-left: 0;
+    }
+}
+
+@keyframes comeon{
+    0%{
+        opacity:0;
+    }
+    80%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from{
+        transform: scale(0.1);
+        opacity:0.1;
+
+    }
+    to{
+        transform: scale(1);
+        opacity:1;
+    }
+}
+
+/*_-_-_-_-_-_-_-_media_-_-_-_-_-_-_-_*/
+@media screen and (max-width:850px){
+    body {
+        font-size: 1.2rem;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        width: 100%;
+        padding-inline-start: 0;
+    }
+    .ic-comp {
+        max-height: 80px;
+    }
+    .sites {
+        flex-direction: column;
+        border-bottom: 1px #222 solid;
+    }
+    .sites:nth-child(1) {
+        padding-top: 40px;
+        border-top: 1px #222 solid;
+    }
+}

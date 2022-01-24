@@ -8,6 +8,13 @@ body {
     background-position: center;
     font-size: 1.4rem;
 }
+ul {
+    padding-inline-start: 0;
+}
+p {
+    text-align: center;
+    line-height: 50px;
+}
 /*_-_-_-_-_-_-_-_nav_-_-_-_-_-_-_-_*/
 nav {
     display: flex;
@@ -42,6 +49,9 @@ nav ul li {
     flex-direction: column;
     margin-left: 10px;
     align-items: center;
+}
+nav ul li:nth-child(1) {
+    margin-left: 0;
 }
 nav ul li a {
     cursor: pointer;
@@ -91,11 +101,6 @@ h2 {
     font-size: 2rem;
     text-align: center;
 }
-/*présentation*/
-#profil article p {
-    text-align: center;
-    line-height: 50px;
-}
 /*compétences*/
 #competence {
     background-color: #fff;
@@ -108,6 +113,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 0.1;
 }
 #competence article ul{
     display: flex;
@@ -120,9 +126,6 @@ h2 {
     min-height: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-#competence p {
-    text-align: center;
 }
 .ic-comp {
     max-height: 120px;
@@ -152,12 +155,14 @@ h2 {
 #parcoursA article div ul{
     width: 350px;
     min-width: 350px;
+    padding-inline-start: 40px;
 }
 #parcoursA article div ul li{
     padding: 10px;
 }
 #parcoursA article div div ul{
     width: 350px;
+    padding-inline-start: 40px;
 }
 #parcoursA article div div ul li{
     padding: 10px;
@@ -173,7 +178,6 @@ h2 {
     align-items: center;
     text-align: center;
 }
-#realisation article div a img,
 #realisation article div a img{
     transition: 0.2s;
     transform: scale(0.01);
@@ -192,6 +196,9 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+#contact article form label span {
+    color: crimson
 }
 .contact {
     width: 400px;
@@ -212,14 +219,10 @@ input[type="submit"]{
 input[type="submit"]:hover,
 input[type="submit"]:focus {
     transform: scale(1.05);
-    border-radius: 5px;
-    font-size: 1.2rem;
     background-color: rgb(255, 145, 0);
     border: 5px solid rgb(255, 196, 0);
 }
-#contact article div{
-    text-align: center;
-}
+
 /*animations au scroll sur sections*/
 @keyframes slideRight{
     0%{
@@ -273,7 +276,6 @@ input[type="submit"]:focus {
     }
     nav ul {
         width: 100%;
-        padding-inline-start: 0;
     }
     .ic-comp {
         max-height: 80px;

@@ -162,9 +162,9 @@
             </h2>
             <article>
                 <form action="index.php#contact" method="post">
-                    <label>Votre email</label>
+                    <label>Votre email<span>*</span></label>
                     <input type="email" name="email" class="contact" required>
-                    <label>Message</label>
+                    <label>Message<span>*</span></label>
                     <textarea name="message" class="contact" rows="15" required></textarea>
                     <input type="submit">
                 </form>
@@ -184,6 +184,7 @@
                         }
                     ?>
                 </div>
+                <p>Vous pouvez également me joindre au 06.76.32.46.48</p>
             </article>
         </section>
 

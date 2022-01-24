@@ -33,13 +33,13 @@ navObserver.observe(document.querySelector("#titre"));
 //observer des sections
 let sections = document.querySelectorAll(".box-div");
 
-if (document.body.clientWidth>850){
+if (document.body.clientWidth > 850) {
   sections.forEach((section) => {
     let navcard1Observer = new IntersectionObserver((scrolls) => {
       scrolls.forEach((scroll) => {
         if (scroll.isIntersecting) {
 
-          if (section.getAttribute("id") == "competence"){
+          if (section.getAttribute("id") == "competence") {
             let iconeOne = document.querySelector("#competence article ul:nth-child(1)");
             iconeOne.style.animation = "slideRight 0.8s linear forwards";
             let iconeTwo = document.querySelector("#competence article ul:nth-child(2)");
@@ -75,4 +75,12 @@ if (document.body.clientWidth>850){
 
     navcard1Observer.observe(section);
   });
+}
+else {
+  let elts = document.querySelectorAll("#realisation article div a img");
+  elts.forEach(el => {
+    el.style.transform = "scale(1)";
+  })
+  let all = document.querySelector("#competence article");
+  all.style.opacity = "1";
 }
